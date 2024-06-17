@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useSelector, useDispatch } from 'react-redux';
 import SideBar from "./components/SideBar";
 import "./App.css";
 import CreateNote from "./components/CreateNote";
@@ -9,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 
 const App = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [activeMenuTab, setActiveMenuTab] = useState(0);
   const [addTask, SetAddTask] = useState(false);
   const [taskData, setTaskData] = useState([]);
@@ -23,6 +25,10 @@ const App = () => {
     "Wireframes",
     "Logout",
   ];
+
+  // const count = useSelector((state) => state);
+  
+
   const activeTab = (active) => {
     setActiveMenuTab(active);
   };
