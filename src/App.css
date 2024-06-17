@@ -7,6 +7,19 @@
   pointer-events: none;
 }
 
+.google-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+.header {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

@@ -58,6 +58,7 @@ const GoogleLogin = () => {
   return (
     <div>
       <div className="google-logo d-flex justify-content-center py-3">
+      <h1 className="header">Login</h1>
         <img
           src={googleLogo}
           className="logo cursor-pointer"
