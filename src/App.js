@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from "react-redux";
 import SideBar from "./components/SideBar";
 import "./App.css";
 import CreateNote from "./components/CreateNote";
@@ -19,6 +19,7 @@ const App = () => {
   const UserInfo = JSON.parse(localStorage.getItem("ProfileData"));
   const menu = [
     "Task",
+    "Camera Access",
     "Mobile App",
     "Website Redesign",
     "Design System",
@@ -27,7 +28,6 @@ const App = () => {
   ];
 
   // const count = useSelector((state) => state);
-  
 
   const activeTab = (active) => {
     setActiveMenuTab(active);
@@ -57,9 +57,12 @@ const App = () => {
   useEffect(() => {
     // console.log(activeMenuTab);
     // console.log("UserInfo", UserInfo);
-    if (activeMenuTab === 5) {
+    if (activeMenuTab === 6) {
       localStorage.clear();
       navigate("/login");
+    }
+    if (activeMenuTab === 1) {
+      navigate("/camera-access");
     }
   }, [activeMenuTab]);
 

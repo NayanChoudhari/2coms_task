@@ -5,6 +5,7 @@ import Login from "../components/Login";
 import FileNotFound from "../components/FileNotFound";
 import Protected from "./Protected";
 import App from "../App";
+import CameraAccess from "../components/CameraAccess";
 
 const RouteIndex = () => {
   return (
@@ -17,6 +18,15 @@ const RouteIndex = () => {
           element={
             <Protected redirectPath="/login">
               <App />
+            </Protected>
+          }
+        />
+        <Route
+          exact
+          path="/camera-access"
+          element={
+            <Protected redirectPath="/login">
+              <CameraAccess />
             </Protected>
           }
         />
