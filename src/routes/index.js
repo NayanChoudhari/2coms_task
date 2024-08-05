@@ -9,27 +9,35 @@ import CameraAccess from "../components/CameraAccess";
 
 const RouteIndex = () => {
   return (
+    // <BrowserRouter>
+    //   <Routes>
+    //     <Route exact path="/login" element={<Login />} />
+    //     <Route
+    //       exact
+    //       path="/"
+    //       element={
+    //         <Protected redirectPath="/login">
+    //           <App />
+    //         </Protected>
+    //       }
+    //     />
+    //     <Route
+    //       exact
+    //       path="/camera-access"
+    //       element={
+    //         <Protected redirectPath="/login">
+    //           <CameraAccess />
+    //         </Protected>
+    //       }
+    //     />
+    //     <Route path="*" element={<FileNotFound />} />
+    //   </Routes>
+    // </BrowserRouter>
+
     <BrowserRouter>
       <Routes>
-        <Route exact path="/login" element={<Login />} />
-        <Route
-          exact
-          path="/"
-          element={
-            <Protected redirectPath="/login">
-              <App />
-            </Protected>
-          }
-        />
-        <Route
-          exact
-          path="/camera-access"
-          element={
-            <Protected redirectPath="/login">
-              <CameraAccess />
-            </Protected>
-          }
-        />
+        <Route exact path="/" element={<App />} />
+        <Route exact path="/camera-access" element={<CameraAccess />} />
         <Route path="*" element={<FileNotFound />} />
       </Routes>
     </BrowserRouter>
