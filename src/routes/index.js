@@ -6,6 +6,7 @@ import FileNotFound from "../components/FileNotFound";
 import Protected from "./Protected";
 import App from "../App";
 import CameraAccess from "../components/CameraAccess";
+import TestApp from "../components/TestApp";
 
 const RouteIndex = () => {
   return (
@@ -38,6 +39,7 @@ const RouteIndex = () => {
       <Routes>
         <Route exact path="/" element={<App />} />
         <Route exact path="/camera-access" element={<CameraAccess />} />
+        <Route exact path="/test-app" element={<TestApp />} />
         <Route path="*" element={<FileNotFound />} />
       </Routes>
     </BrowserRouter>

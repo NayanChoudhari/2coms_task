@@ -24,6 +24,7 @@ const App = () => {
     "Website Redesign",
     "Design System",
     "Wireframes",
+    "API Test",
     "Logout",
   ];
 
@@ -57,12 +58,15 @@ const App = () => {
   useEffect(() => {
     // console.log(activeMenuTab);
     // console.log("UserInfo", UserInfo);
-    if (activeMenuTab === 6) {
+    if (activeMenuTab === 7) {
       localStorage.clear();
       navigate("/login");
     }
     if (activeMenuTab === 1) {
       navigate("/camera-access");
+    }
+    if (activeMenuTab === 6) {
+      navigate("/test-app");
     }
   }, [activeMenuTab]);
 
